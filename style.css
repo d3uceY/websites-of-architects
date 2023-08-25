@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box !important;
+    font-family: Outfit, sans-serif;
+}
+
+:root{
+    --black: #2d2d2c;
+    --white: #fefeff;
+    --small-font-size: 12px;
+    --medium-font-size: 24px;
+    --heading-font-size: 64px;
+    --grey1:rgb(189, 189, 189);
+    --grey2: #f9f9f9;
+}
+
+body{
+    background: var(--white);;
+}
+
+
+
+/* navigation css */
+
+.navigation-logo-box{
+    position: relative;
+    width: fit-content;
+}
+
+.navigation-logo-box::before{
+   content: 'Archipark';
+   position: absolute;
+   color: var(--black);
+   bottom: 8px;
+   left: 8px;
+   font-size: var(--small-font-size);
+   font-weight: 600;
+}
+
+ .navigation-item a{
+   color: var(--black);
+   text-decoration: none;
+   font-size: var(--small-font-size);
+   text-transform: uppercase;
+}
+
+.navigation-item{
+    padding: 0px;
+}
+
+.navigation-item:hover,
+.navigation-item:active,
+.navigation-item:focus-visible{
+    border-top:1px solid var(--black);
+    border-bottom:1px solid var(--black);
+}
+
+
+
+/* hero css */
+.hero{
+    min-height: 100vh;
+}
+
+.hero-left-column{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    height: 75vh;
+}
+
+.hero-write-up div:nth-child(1){
+   color: var(--grey1);
+   font-weight: 200;
+}
+
+.hero-write-up div:nth-child(2){
+    font-weight: 600;
+}
+
+.hero-write-up div{
+    font-size: var(--heading-font-size);
+}
+
+.hero-buttons{
+    margin-top: 6rem;
+    margin-bottom: 5rem;
+}
+
+.hero-buttons button{
+    width: 50px;
+    height: 50px;
+    outline: none;
+    border: none;
+    border: border 1px solid var(--grey2);
+}
+
+.hero-buttons button:hover{
+  background: var(--white);
+  border: 1px solid var(--grey1);
+}
+
+.slide-numbers{
+    color: var(--grey1);
+    display: flex;
+    font-size: var(--medium-font-size);
+    font-weight: 200;
+}
+
+.slash{
+    content: '';
+    width: 1px;
+    height: 40px;
+    background: var(--grey1);
+    display: block;
+    margin-left: 50px;
+    margin-right: 50px;
+    transform: rotate(46deg);
+}
+
+.ten div{
+    line-height: 1;
+}
+
+.hero-image-container{
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+}
+
+.hero-image-container button{
+   position: absolute;
+   left: 0px;
+   bottom: 0px;
+   text-transform: uppercase;
+   outline: none;
+   border: none;
+   width: 100%;
+   max-width: 230px;
+   text-align: start;
+   background: var(--white);
+   color: var(--black);
+   font-weight: 300;
+   font-size: var(--small-font-size);
+   letter-spacing: 3px;
+}
