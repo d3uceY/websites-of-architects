@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Roboto:wght@100;300;400;500;700;900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;600&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 *{
     padding: 0px;
     margin: 0px;
@@ -16,7 +16,10 @@
     --grey1:rgb(189, 189, 189);
     --grey2: #f9f9f9;
     --grey3: #fafafa;
+    --grey4: #f2f2f2;
     --header-font-weight: 200;
+    --section-mt: 3rem;
+    --roboto: Roboto, sans-serif;
 }
 
 body{
@@ -68,10 +71,6 @@ body{
 }
 
 .hero-left-column{
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-    height: 75vh;
 }
 
 .hero-write-up div:nth-child(1){
@@ -129,7 +128,6 @@ body{
 
 .hero-image-container{
     max-width: 900px;
-    height: fit-content;
     position: relative;
 }
 .hero-image-container img{
@@ -160,6 +158,7 @@ body{
 .about-container{
     background: var(--grey3);
     padding: 30px;
+    margin-top: var(--section-mt);
 }
 .about-images{
     flex: 1;
@@ -176,13 +175,15 @@ body{
 }
 
 .about-images img:nth-child(2){
-    bottom: -26px;
+    bottom: -50px;
     left: 0px;
+    z-index: 2;
 }
 
 .about-images img:nth-child(3){
     top: 15px;
-    right: -34px;
+    right: -35px;
+    z-index: 1;
 }
 
 
@@ -201,6 +202,7 @@ body{
     font-size: 16px;
     font-weight: 300;
     max-width: 400px;
+    font-family: var(--roboto);
 }
 
 .about-button{
@@ -219,3 +221,103 @@ body{
 
 /* focus-css */
 
+.focus-container{
+    --section-mt: 7rem;
+    margin-top: var(--section-mt);
+}
+
+.focus-container h2{
+    color: var(--grey1);
+    font-size: var(--heading-font-size);
+    font-weight: var(--header-font-weight);
+}
+
+.focus-write-up-one div:first-child, .focus-write-up-two div:first-child{
+    font-size: 200px;
+    color: var(--grey4);
+    font-family: var(--roboto);
+    font-weight:800;
+
+}
+
+.focus-write-up-one, .focus-write-up-two{
+    max-width: 500px;
+    max-height: 200px;
+}
+
+.focus-write-up-one div:last-child, .focus-write-up-two div:last-child{
+    --medium-font-size: 22px;
+    font-size: var(--medium-font-size);
+}
+
+/* ourprojects css */
+
+.project-grid-container{
+    /* max-width: 1000px;
+    display: block;
+    margin: 0px auto; */
+    margin-top: var(--section-mt);
+}
+
+.our-projects-container h2{
+    color: var(--grey1);
+    font-size: var(--heading-font-size);
+    font-weight: var(--header-font-weight);
+    margin-top: var(--section-mt);
+}
+
+.our-projects-container button{
+    outline: none;
+    border: none;
+    width: 100%;
+    max-width: 230px;
+    text-align: center;
+    background: var(--black);
+    color: white;
+    font-weight: 300;
+    font-size: var(--small-font-size);
+    letter-spacing: 3px;
+}
+
+.our-projects-container button span{
+    color: white;
+}
+
+.our-project-image{
+    max-width: 100%;
+    height: auto;
+}
+
+.our-project-image-container{
+    position: relative;
+}
+
+.our-project-image-container .overlay{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: 100%;
+    width: 100%;
+    padding: 15%;
+    color: white;
+    background: rgb(0, 0, 0, 0.7);
+    opacity: 0;
+}
+
+.our-project-image-container .overlay:hover{
+    opacity: 1;
+}
+
+.our-project-image-container .overlay a{
+    color: white;
+    text-decoration: none;
+}
+
+.our-project-image-container .overlay h3{
+    --heading-font-size: calc(40px + 1vw);
+    font-size: var(--heading-font-size);
+    font-weight: 600;
+}
