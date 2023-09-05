@@ -70,9 +70,6 @@ body{
     min-height: 100vh;
 }
 
-.hero-left-column{
-}
-
 .hero-write-up div:nth-child(1){
    color: var(--grey1);
    font-weight: var(--header-font-weight);
